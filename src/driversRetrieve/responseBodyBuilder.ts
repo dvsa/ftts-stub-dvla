@@ -1,0 +1,156 @@
+import { CategoryType } from '@dvsa/ftts-dvla-api-model/dist/standard/generated/categoryType';
+import { Driver } from '@dvsa/ftts-dvla-api-model/dist/standard/generated/driver';
+import { DriverDetailsResponse } from '@dvsa/ftts-dvla-api-model/dist/standard/generated/driverDetailsResponse';
+import { EntitlementDetails } from '@dvsa/ftts-dvla-api-model/dist/standard/generated/entitlementDetails';
+import { Licence } from '@dvsa/ftts-dvla-api-model/dist/standard/generated/licence';
+
+const responseBodyBuilder = (licenceNumber: string): DriverDetailsResponse => ({
+  driver: {
+    address: {
+      unstructuredAddress: {
+        line1: 'DVLA Long View Rd',
+        line2: 'Morriston',
+        line3: 'Clase',
+        line4: 'Swansea',
+        line5: 'West Glamorgan',
+        postcode: 'SA6 7JL',
+      },
+    },
+    dateOfBirth: '1995-12-31',
+    disqualifiedUntil: '2019-12-31',
+    drivingLicenceNumber: licenceNumber,
+    firstNames: 'Joseph',
+    fullModeOfAddress: 'Mr Joseph Bloggs',
+    gender: Driver.GenderEnum.Male,
+    lastName: 'Bloggs',
+    previousDrivingLicence: [
+      {
+        previousDrivingLicenceNumber: 'ABCDE123456AB1AB',
+        previousLastName: 'Doe',
+        previousFirstNames: 'John',
+        previousDateOfBirth: '1995-12-31',
+      },
+    ],
+    title: 'Mr',
+  },
+  driverRedirect: true,
+  entitlement: [
+    {
+      categoryCode: 'B',
+      categoryLegalLiteral: 'Vehicles up to 3,500kg Maximum Authorised Mass (MAM) with up to 8 passenger seats and driver (with a trailer up to 750kg). Can also tow heavier trailers if the total weight of vehicle and trailer isn\'t more than 3,500kg. Physically disabled drivers with provisional category B entitlement will also have provisional entitlement to ride category A1 or A motor tricycles. Able-bodied drivers can no longer ride motor tricycles with a provisional category B licence.',
+      categoryShortLiteral: 'Car with trailer up to 750kg',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+      fromDate: '1986-10-23',
+    },
+    {
+      categoryCode: 'AM',
+      categoryLegalLiteral: '2-wheel vehicles or 3-wheel vehicles with a maximum design speed of over 25km/h and not more than 45km/h; Light quadricycles with an unladen mass of not more than 350kg, not including the mass of the batteries in the case of electric vehicles, whose maximum speed is over 25km/h and not more than 45km/h.',
+      categoryShortLiteral: 'Moped or tricycle; Light quadricycle',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+    },
+    {
+      categoryCode: 'Q',
+      categoryLegalLiteral: 'Motor vehicles with fewer than 4 wheels which, if propelled by an internal combustion engine, has a cylinder capacity not exceeding 50cc and, if not equipped with pedals by means of which the vehicle is capable of being propelled, has a maximum design speed not exceeding 25km/h.',
+      categoryShortLiteral: 'Moped; Tricycle',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+    },
+    {
+      categoryCode: 'C1',
+      categoryLegalLiteral: 'Vehicles weighing between 3,500 and 7,500kg (with a trailer up to 750kg), with no more than 8 passengers and driver.',
+      categoryShortLiteral: 'Medium goods vehicle with trailer up to 750kg',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+      fromDate: '1986-10-23',
+    },
+    {
+      categoryCode: 'D1',
+      categoryLegalLiteral: 'Vehicles with no more than 16 passenger seats and driver and with a maximum length not exceeding 8 metres with a trailer up to 750kg.',
+      categoryShortLiteral: 'Minibus with trailer up to 750kg',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+      fromDate: '1986-10-23',
+    },
+    {
+      categoryCode: 'F',
+      categoryLegalLiteral: 'Agricultural.',
+      categoryShortLiteral: 'Agricultural',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+      fromDate: '1986-10-23',
+    },
+    {
+      categoryCode: 'G',
+      categoryLegalLiteral: 'Road roller.',
+      categoryShortLiteral: 'Road roller',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+      fromDate: '1986-10-23',
+    },
+    {
+      categoryCode: 'H',
+      categoryLegalLiteral: 'Tracked vehicles.',
+      categoryShortLiteral: 'Tracked vehicle',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+      fromDate: '1986-10-23',
+    },
+    {
+      categoryCode: 'K',
+      categoryLegalLiteral: 'Mowing machine or vehicles controlled by someone on foot.',
+      categoryShortLiteral: 'Mowing machine',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+      fromDate: '1986-10-23',
+    },
+    {
+      categoryCode: 'L',
+      categoryLegalLiteral: 'Electrically-propelled vehicle.',
+      categoryShortLiteral: 'Electric vehicle',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+      fromDate: '1986-10-23',
+    },
+    {
+      categoryCode: 'N',
+      categoryLegalLiteral: 'Vehicles exempt from Vehicle Excise Duty.',
+      categoryShortLiteral: 'VED exempt vehicle',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+      fromDate: '1986-10-23',
+    },
+    {
+      categoryCode: 'P',
+      categoryLegalLiteral: 'Motor vehicles with fewer than 4 wheels with a maximum design speed exceeding 45 kilometres per hour (km/h) but not exceeding 50km/h and which, if propelled by an internal combustion engine, has a cylinder capacity not exceeding 50cc.',
+      categoryShortLiteral: 'Moped; Tricycle',
+      categoryStatus: EntitlementDetails.CategoryStatusEnum.Valid,
+      categoryType: CategoryType.Provisional,
+      expiryDate: '2034-12-28',
+      fromDate: '1986-10-23',
+    },
+  ],
+  licence: {
+    status: Licence.StatusEnum.Valid,
+    statusQualifier: Licence.StatusQualifierEnum.ForReAssessmentOnly,
+    type: Licence.TypeEnum.Provisional,
+  },
+  tokenValidity: {
+    tokenValidFromDate: '2019-12-31',
+    tokenValidToDate: '2019-12-31',
+  },
+});
+
+export default responseBodyBuilder;
